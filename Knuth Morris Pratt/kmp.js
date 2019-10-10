@@ -42,7 +42,7 @@ function kmp(pat, pal) {
       j++;
     }
     if (j == m) {
-      //console.log("Patron encontrado " + (i - j).toString())
+      console.log("Patron encontrado " + (i - j).toString())
       final.push(i-j);
       j = tabla[j - 1]
 
