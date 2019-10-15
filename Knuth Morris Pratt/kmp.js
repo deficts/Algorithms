@@ -18,6 +18,7 @@ function crearTabla(pat) {
       }
     }
   }
+  console.log(tabla)
   return tabla;
 }
 
@@ -32,7 +33,7 @@ function kmp(pat, pal) {
   var n = pal.length;
   let i = 0;
   let j = 0;
-  var final =[m];
+  var final =[];
 
   while (i < n) {
     //console.log("pat= "+pat[j])
@@ -42,8 +43,7 @@ function kmp(pat, pal) {
       j++;
     }
     if (j == m) {
-      console.log("Patron encontrado " + (i - j).toString())
-      final.push(i-j);
+      final.push("Patron encontrado en el índice: " + (i - j).toString());
       j = tabla[j - 1]
 
     } else if (i < n && pat[j] != pal[i]) {
@@ -57,3 +57,4 @@ function kmp(pat, pal) {
   }
   return final;
 }
+kmp('aa','holacomoestaas')
