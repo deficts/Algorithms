@@ -18,7 +18,7 @@ function crearTabla(pat) {
             }
         }
     }
-    console.log(tabla)
+    //console.log(tabla)
     return tabla;
 }
 
@@ -43,7 +43,7 @@ function kmp(pat, pal) {
             j++;
         }
         if (j == m) {
-            final.push("Patron encontrado en el índice: " + (i - j).toString());
+            final.push(i - j);
             j = tabla[j - 1]
 
         } else if (i < n && pat[j] != pal[i]) {
@@ -62,27 +62,3 @@ function kmp(pat, pal) {
 var pat1 = document.getElementById("patron1");
 var pat2 = document.getElementById("patron2");
 var pat3 = document.getElementById("patron3");
-
-
-pat1.addEventListener('click', function(){
-    loadTxt(pat1.value);
-});
-pat2.addEventListener('click', function(){
-    loadTxt(pat2.value);
-});
-pat3.addEventListener('click', function(){
-    loadTxt(pat3.value);
-});
-
-
-
-
-function loadTxt(patron) {
-    fetch('archivo.txt')
-        .then(function (response) {
-            return response.text();
-        })
-        .then(function (data) {
-            console.log(kmp(patron, data));
-        })
-}
