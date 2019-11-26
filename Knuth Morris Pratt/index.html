@@ -2,66 +2,44 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="author" content="">
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <style media="screen">
-    .input-field input[type=text]:focus+label,
-    .materialize-textarea:focus:not([readonly])+label {
-      color: black !important;
-    }
-    .input-field input[type=text]:focus,
-    .materialize-textarea:focus:not([readonly]) {
-      border-bottom: 1px solid #E8EAF6 !important;
-      box-shadow: 0 1px 0 0 #E8EAF6 !important;
-    }
-  </style>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style media="screen">
+        .input-field input[type=text]:focus+label,
+        .materialize-textarea:focus:not([readonly])+label {
+            color: black !important;
+        }
+
+        .input-field input[type=text]:focus,
+        .materialize-textarea:focus:not([readonly]) {
+            border-bottom: 1px solid #E8EAF6 !important;
+            box-shadow: 0 1px 0 0 #E8EAF6 !important;
+        }
+    </style>
 </head>
 
 <body>
-  <div class="">
-    <h1 class="center"> Knuth Morris Pratt</h1>
-  </div>
-  <div class="row container">
-    <form class="col s12">
-      <div class="row">
-        <div class="input-field col s12 l6">
-          <textarea id="patron" class="materialize-textarea"></textarea>
-          <label for="textarea1">Patrón</label>
-        </div>
-        <div class="input-field col s12 l6">
-          <textarea id="texto" class="materialize-textarea"></textarea>
-          <label for="textarea1">Texto</label>
-        </div>
-        <div class="input-field col s12 l12">
-          <div class="file-field input-field">
-            <div class="btn indigo lighten-5">
-              <span style="color:black">File</span>
-              <input type="file">
-            </div>
-            <div class="file-path-wrapper">
-              <input class="file-path validate" type="text">
-            </div>
-          </div>
-        </div>
-        <div class="input-field col s12 l12 center">
-          <button id="btnIngresar" type="button" name="button" class="btn indigo lighten-5" style="color:black">Ingresar</button>
-        </div>
-      </div>
-    </form>
-    <div class="row">
-      <div class="col s12 l12 center">
-        <p id="resultado"></p>
-        <br>
-        <p id="instancia"></p>
-      </div>
+    <div class="">
+        <h1 class="center"> Knuth Morris Pratt</h1>
     </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="justify-content-center buttons">
+                <button id="patron1" value="cctaagg" class="space">CCTAAGG</button>
+                <button id="patron2" value="gcggccgc" class="space">GCGGCCGC</button>
+                <button id="patron3" value="tcga" class="space">TCGA</button>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script type="text/javascript" src="main.js"></script>
-</body>
-
-</html>
+    <script type="text/javascript" src="kmp.js"></script>
+</body></html>
