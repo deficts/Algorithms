@@ -1,3 +1,4 @@
+#euclides
 def mcd(a,b):
     if(b==0):
         return a
